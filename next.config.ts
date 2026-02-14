@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
+  // Add basePath for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  // Add trailingSlash for better compatibility
+  trailingSlash: true,
 };
 
 export default nextConfig;
